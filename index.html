@@ -25,11 +25,13 @@
         <section id="ms_main_nav">
           <div class="ms_nav_top">
             <div class="ms_nav_logo">
-              <img src="img/Spotify_Logo.png" alt="Logo Spotify">
+              <img class="hidden-xs" src="img/Spotify_Logo.png" alt="Logo Spotify">
+              <img class="visible-xs-block" src="img/spotify_xs.jpeg" alt="">
             </div>
-            <div class="ms_nav_menu">
+
+            <div class="ms_nav_menu hidden-xs">
               <ul>
-                <li>
+                <li class="ms_active_nav">
                   <a href="">
                     <img src="img/home_nav.jpeg" alt="Home">
                     Home
@@ -49,7 +51,23 @@
                 </li>
               </ul>
             </div>
-            <div class="ms_nav_playlist">
+            <!-- nav xs -->
+            <div class="ms_nav_menu_xs visible-xs-block">
+              <ul>
+                <li>
+                  <a href=""><img src="img/home_nav.jpeg" alt="Home"></a>
+                </li>
+                <li>
+                  <a href=""><img src="img/search_nav.jpeg" alt="Search"></a>
+                </li>
+                <li>
+                  <a href=""><img src="img/libreria_nav.jpeg" alt="Libreria"></a>
+                </li>
+              </ul>
+            </div>
+            <!-- /nav xs -->
+
+            <div class="ms_nav_playlist hidden-xs">
               <h2>PLAYLIST</h2>
               <a href="#" class="ms_btn">
                 <span class="ms_plus_playlist">
@@ -68,10 +86,22 @@
             </div>
           </div>
 
-          <div id="ms_nav_bottom">
-            <a href="#">installa app</a>
-            <div>john doe</div>
+          <div id="ms_nav_bottom" class="hidden-xs">
+            <a href="#">
+              <i class="far fa-arrow-alt-circle-down"></i>
+              Installa app
+            </a>
+            <span>
+              <img src="img/john_doe.jpeg" alt="portrait">
+              John Doe
+            </span>
           </div>
+          <!-- ms_bottom XS -->
+          <div id="ms_nav_bottom_xs">
+            <i class="far fa-arrow-alt-circle-down"></i>
+            <img src="img/john_doe.jpeg" alt="portrait">            
+          </div>
+          <!-- /ms_bottom XS -->
         </section>
         <!-- /ms_main_nav: nav sinistra -->
 
