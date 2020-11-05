@@ -15,6 +15,10 @@ h2{
   color: white;
   margin-bottom: 0;
 }
+p{
+  margin: -15px 0 17px;
+  color: #75777C;
+}
 a{
   color: #7A7D81;
   font-weight: 600;
@@ -183,12 +187,14 @@ main #ms_main_nav{
   justify-content: flex-end;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
 }
 #ms_btn_upgrade a{
   display: block;
   border: 2px solid white;
   border-radius: 50px;
   padding: 10px 40px;
+  margin-right: 20px;
   font-weight: 800;
   color: white;
 }
@@ -199,13 +205,13 @@ main #ms_main_nav{
 /* <!-- /fixed top --> */
 
 /* <!-- pager --> */
-#pager ul{
+#ms_pager ul{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   text-transform: uppercase;
 }
-#pager .active::after {
+#ms_pager .ms_active::after{
   content: "";
   display: block;
   width: 40px;
@@ -214,16 +220,91 @@ main #ms_main_nav{
   border-radius: 3px;
   background-color: #ADFF2F;
 }
-#pager li{
-  padding: 10px 10px;
+#ms_pager li{
+  padding: 0 10px 10px;
 }
-#pager li a{
+#ms_pager li a{
   font-weight: 800;
   font-size: 14px;
 }
 /* <!-- /pager --> */
 
+/* <!-- categorie musica --> */
 
+/* <!-- /categorie musica --> */
+#ms_category{
+  padding: 10px 0;
+}
+#ms_category h2{
+  font-size: 22px;
+  padding-bottom: 20px;
+}
+.ms_section_music{
+  /* background: green; */
+  display: flex;
+  flex-wrap: wrap;
+}
+.ms_section_music .ms_album{
+  /* background: lime; */
+  width: 180px;
+  height: 240px;
+  padding-right: 15px;
+}
+.ms_album .ms_album_item{
+  position: relative;
+  overflow: hidden;
+}
+.ms_album_item img{
+  width: 100%;
+}
+.album_item_layover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+}
+.album_item_layover i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  color: white;
+}
+.ms_album_item:hover .album_item_layover {
+  opacity: 1;
+}
+.ms_album h4{
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  text-align: center;
+}
+.ms_album figcaption{
+  font-size: 12px;
+  color: #74777C;
+  text-align: center;
+}
+.ms_album a:hover{
+  color: #74777C;
+}
+
+.ms_popolari .ms_album_item img{
+  border-radius: 50%;
+}
+.ms_popolari .album_item_layover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  border-radius: 50%;
+}
 /* <!-- /ms_main_content: corpo centrale --> */
 /* <!-- /main --> */
 
@@ -251,6 +332,9 @@ footer{
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px){
+
+  /* <!-- categorie musica --> */
+  /* <!-- /categorie musica --> */
 
 }
 
@@ -302,8 +386,15 @@ footer{
     max-width: 30px;
   }
 
-  #pager li a {
+  #ms_pager li a {
     font-weight: 600;
     font-size: 12px;
   }
+
+  /* <!-- categorie musica --> */
+  .ms_section_music .ms_album {
+    width: 140px;
+    height: 190px;
+  }
+  /* <!-- /categorie musica --> */
 }
