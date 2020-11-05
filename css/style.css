@@ -24,6 +24,9 @@ a:hover{
   text-decoration: none;
   color: white;
 }
+ul{
+  list-style: none;
+}
 
 /* <!-- wrapper: dimensione viewport--> */
 #ms_wrapper{
@@ -162,14 +165,15 @@ main #ms_main_nav{
 /* <!-- /ms_main_nav: nav sinistra --> */
 
 /* <!-- ms_main_content: corpo centrale --> */
+/* <!-- fixed top --> */
 #ms_main_content{
   /* height: 100%; */
   width: calc(100% - 250px);
   background: #141922;
-  padding: 110px 20px 20px;;
+  padding: 110px 20px 20px;
   overflow-y: auto;
 }
-#ms_main_content .ms_btn_upgrade{
+#ms_main_content #ms_btn_upgrade{
   position: fixed;
   top: 0;
   right: 0;
@@ -180,7 +184,7 @@ main #ms_main_nav{
   align-items: center;
   background-color: rgba(0, 0, 0, 0.3);
 }
-.ms_btn_upgrade a{
+#ms_btn_upgrade a{
   display: block;
   border: 2px solid white;
   border-radius: 50px;
@@ -188,10 +192,38 @@ main #ms_main_nav{
   font-weight: 800;
   color: white;
 }
-.ms_btn_upgrade a:hover{
+#ms_btn_upgrade a:hover{
   transition: padding 0.1s;
   padding: 15px 45px;
 }
+/* <!-- /fixed top --> */
+
+/* <!-- pager --> */
+#pager ul{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-transform: uppercase;
+}
+#pager .active::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  margin: auto;
+  border-radius: 3px;
+  background-color: #ADFF2F;
+}
+#pager li{
+  padding: 10px 10px;
+}
+#pager li a{
+  font-weight: 800;
+  font-size: 14px;
+}
+/* <!-- /pager --> */
+
+
 /* <!-- /ms_main_content: corpo centrale --> */
 /* <!-- /main --> */
 
@@ -227,7 +259,7 @@ footer{
   #ms_main_content {
     width: calc(100% - 50px);
   }
-  #ms_main_content .ms_btn_upgrade {
+  #ms_main_content #ms_btn_upgrade {
     width: calc(100% - 50px);
   }
 
@@ -270,4 +302,8 @@ footer{
     max-width: 30px;
   }
 
+  #pager li a {
+    font-weight: 600;
+    font-size: 12px;
+  }
 }
