@@ -5,7 +5,24 @@
 }
 
 body{
-  background: orange;
+  background: black;
+  font-family: 'Lato', sans-serif;
+
+}
+h2{
+  font-size: 16px;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 0;
+}
+a{
+  color: #7A7D81;
+  font-weight: 600;
+  font-size: 13px;
+}
+a:hover{
+  text-decoration: none;
+  color: white;
 }
 
 /* <!-- wrapper: dimensione viewport--> */
@@ -26,21 +43,21 @@ body{
 
 /* <!-- ms_main_nav: nav sinistra --> */
 main #ms_main_nav{
+  /* background: yellow; */
+  /* padding: 20px; */
   width: 250px;
   height: 100%;
-  background: yellow;
-  /* padding: 20px; */
   overflow-y: hidden;
   min-height: 480px;
 }
 
 #ms_main_nav .ms_nav_top{
+  background: black;
   display: flex;
   flex-direction: column;
   width: 100%;
   height: calc(100% - 90px);
   padding: 20px;
-  background: lightgreen;
   overflow: hidden;
 }
 
@@ -49,40 +66,57 @@ main #ms_main_nav{
 }
 
 .ms_nav_top .ms_nav_menu{
-  padding: 20px 0;
+  padding: 20px 0 0;
   /* background: pink; */
 }
 .ms_nav_menu ul{
   list-style: none;
+  /* background: gray; */
 }
 .ms_nav_menu li{
-  height: 30px;
+  height: 35px;
   line-height: 30px;
+  /* border: 1px solid black; */
+}
+.ms_nav_menu li img{
+  background: black;
+  max-width: 30px;
+  min-height: 30px;
+  margin-right: 5px;
 }
 
 .ms_nav_top .ms_nav_playlist{
-  padding: 20px 0;
+  padding: 0 0 20px;
   overflow: hidden;
   /* background: pink; */
 }
+
 
 .ms_nav_playlist .ms_btn{
   display: inline-block;
   margin: 20px 0;
   text-decoration: none;
-  color: white;
+  color: #7A7D81;
+  font-size: 16px;
 }
-.ms_btn::before{
-  content: "+";
+.ms_btn .ms_plus_playlist i{
   display: inline-block;
   width: 35px;
   height: 35px;
-  line-height: 35px;
-  text-align: center;
+  line-height: 33px;
+  margin-right: 5px;
   background-color: gray;
-  color: white;
-  margin-right: 10px;
+  color: black;
+  text-align: center;
+  vertical-align: middle;
 }
+.ms_btn:hover{
+  color: white;
+}
+.ms_btn:hover i{
+  color: white;
+}
+
 
 .ms_nav_playlist ul{
   list-style: none;
