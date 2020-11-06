@@ -283,7 +283,7 @@ main #ms_main_nav{
   font-size: 15px;
   /* text-align: center; */
 }
-.ms_album figcaption{
+.ms_album .ms_figcaption{
   font-size: 12px;
   color: #74777C;
   /* text-align: center; */
