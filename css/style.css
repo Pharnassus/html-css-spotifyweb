@@ -326,11 +326,13 @@ footer{
 }
 .ms_song_data .ms_song_cover{
   /* background: white; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   width: 25%;
-  padding: 10% 0 10% 6%;
 }
 .ms_song_cover img{
-  width: 100%;
+  width: 75%;
   height: 45px;
   object-fit: cover;
   object-position: center;
@@ -393,14 +395,90 @@ footer{
   font-size: 33px;
 }
 .ms_player_controller .ms_controller_bottom{
-  background: darkgrey;
+  /* background: darkgrey; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 50%;
 }
+.ms_controller_bottom span{
+  /* background: gray; */
+  display: inline-block;
+  width: 13%;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+}
+.ms_controller_bottom .ms_time{
+  background: #4D4D4D;
+  border-radius: 15px;
+  width: 76%;
+  height: 4px;
+}
+.ms_time .ms_time_passed{
+  position: relative;
+  background: #C1C1C1;
+  border-radius: 15px;
+  width: 20%;
+  height: 4px;
+}
+.ms_time_passed a{
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.ms_controller_bottom:hover a{
+  color: #ADFF2F;
+  display: block;
+}
+.ms_controller_bottom:hover .ms_time_passed{
+  background: #ADFF2F;
+}
+
 .ms_player_audio{
+  /* background: lime; */
+  display: flex;
   width: 250px;
   height: 100%;
-  background: lime;
+}
+.ms_player_audio_left{
+  /* background: green; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 40%;
+}
+.ms_player_audio_left ul{
+  display: flex;
+  margin: 0
+}
+.ms_player_audio_left ul a{
+  padding-left: 15px;
+  color: white;
+}
+.ms_player_audio_right{
+  /* background: lightgreen; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+.ms_player_audio_right .ms_time{
+  background: #4D4D4D;
+  border-radius: 15px;
+  width: 76%;
+  height: 4px;
+}
+.ms_player_audio_right:hover a{
+  color: #ADFF2F;
+  display: block;
+}
+.ms_player_audio_right:hover .ms_time_passed{
+  background: #ADFF2F;
 }
 /* <!-- /footer --> */
 
@@ -417,19 +495,23 @@ footer{
 
 @media screen and (max-width: 1199px){
 
-  .ms_section_music .ms_album{
-    width: calc(100% / 4);
-  }
+
 }
 
 @media screen and (max-width: 991px){
 
   .ms_section_music .ms_album{
-    width: calc(100% / 2);
+    width: calc(100% / 4);
   }
 
   .ms_player_controller{
-    width: 50%;
+    width: 45%;
+  }
+  .ms_controller_bottom span {
+    width: 15%;
+  }
+  .ms_controller_bottom .ms_time {
+    width: 70%;
   }
 }
 
@@ -486,6 +568,48 @@ footer{
     font-size: 12px;
   }
 
+  .ms_section_music .ms_album{
+    width: calc(100% / 2);
+  }
+
+  .ms_song_cover img {
+    height: 35px;
+  }
+  .ms_song_name h4 {
+    font-size: 12px;
+  }
+  .ms_song_name a {
+    font-size: 10px;
+    line-height: 0
+  }
+  .ms_song_data .ms_song_liked {
+    flex-direction: column;
+  }
+  .ms_song_liked i {
+    padding: 1px;
+    font-size: 15px;
+  }
+
+  .ms_player_controller{
+    width: 45%;
+  }
+  .ms_controller_bottom span {
+    width: 20%;
+  }
+  .ms_controller_bottom .ms_time {
+    width: 45%;
+  }
+
+  .ms_controller_top a {
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  .ms_player_audio_left ul a {
+    padding-left: 5px;
+    color: white;
+    font-size: 12px;
+  }
   /* <!-- categorie musica --> */
 
   /* <!-- /categorie musica --> */
