@@ -5,30 +5,16 @@
 }
 
 body{
-  background: orange;
+  background: darkgrey;
 }
 
-
-#covers h2{
-  margin-left: 10px;
+.ms_play{
+  color: white;
+  background: black;
+  font-size: 29px;
 }
-#covers-list{
-  display: flex;
-  flex-wrap: wrap;
-}
-.cover{
-  width: calc(100% / 6);
-  padding: 20px 10px;
-  text-align: center;
-}
-.cover img{
-  width: 100%;
-  margin-bottom: 10px;
-  /* height: 250px; */
-  /* object-fit: cover; */
-  /* object-position: center; */ /*queste servono a stretchatre un'immagine più alta del normale */
-}
-.cover h4{
-  margin-top: 5px;
-  color: gray;
+.ms_play:hover{
+  color: white;
+  transition: padding 0.2s;
+  font-size: 32px;
 }
